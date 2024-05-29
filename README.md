@@ -4,7 +4,9 @@ This is a video enhancement tool. It started off as a fork of [Real-ESRGAN-ncnn-
 
 ## TODO List
 
-- [ ] Make a TODO list
+- [x] Update README with compilation instructions.
+- [ ] Modify the project to work on video files instead of images.
+- [ ] Update TODO with more things.
 
 ## Usage
 
