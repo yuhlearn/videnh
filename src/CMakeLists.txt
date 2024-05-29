@@ -14,7 +14,7 @@ set(CMAKE_CXX_EXTENSIONS OFF)
 
 # set(CMAKE_EXE_LINKER_FLAGS "-static-libgcc -static-libstdc++")
 
-project(realesrgan-ncnn-vulkan)
+project(videnh)
 
 cmake_minimum_required(VERSION 3.9)
 
@@ -274,9 +274,9 @@ compile_shader(realesrgan_postproc_tta.comp)
 
 add_custom_target(generate-spirv DEPENDS ${SHADER_SPV_HEX_FILES})
 
-add_executable(realesrgan-ncnn-vulkan main.cpp realesrgan.cpp)
+add_executable(videnh main.cpp realesrgan.cpp)
 
-add_dependencies(realesrgan-ncnn-vulkan generate-spirv)
+add_dependencies(videnh generate-spirv)
 
 set(REALESRGAN_LINK_LIBRARIES ncnn webp ${Vulkan_LIBRARY})
 
@@ -306,5 +306,5 @@ if(OPENMP_FOUND)
     list(APPEND REALESRGAN_LINK_LIBRARIES ${OpenMP_CXX_LIBRARIES})
 endif()
 
-target_link_libraries(realesrgan-ncnn-vulkan ${REALESRGAN_LINK_LIBRARIES} -static-libstdc++)
+target_link_libraries(videnh ${REALESRGAN_LINK_LIBRARIES} -static-libstdc++)
 
