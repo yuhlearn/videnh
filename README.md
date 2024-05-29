@@ -10,15 +10,15 @@ This is a video enhancement tool. It started off as a fork of [Real-ESRGAN-ncnn-
 
 ## Usage
 
-### Compile
+### Building the project
 
 There are a number of dependancies you need before you can compile the project. For Debian, the following might do:
 
 ```
-sudo apt-get install libvulkan-dev libgl1-mesa-dev glslc glslang-tools libgif-dev
+sudo apt-get install cmake libvulkan-dev libglut-dev glslc glslang-tools libgif-dev
 ```
 
-Use the following commands to clone the repo and compile the project.
+Use the following commands to clone the repo with submodules and build the project.
 
 ```
 git clone https://github.com/yuhlearn/videnh.git
